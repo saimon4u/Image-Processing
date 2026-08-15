@@ -1,0 +1,974 @@
+[
+  {
+    "domain": "medical",
+    "degradation": "salt_pepper",
+    "image": "cxr_github_01",
+    "level": 1,
+    "amount": 0.02,
+    "clean": "medical/clean/cxr_github_01.png",
+    "degraded": "medical/salt_pepper/cxr_github_01_l1.png"
+  },
+  {
+    "domain": "medical",
+    "degradation": "salt_pepper",
+    "image": "cxr_github_01",
+    "level": 2,
+    "amount": 0.05,
+    "clean": "medical/clean/cxr_github_01.png",
+    "degraded": "medical/salt_pepper/cxr_github_01_l2.png"
+  },
+  {
+    "domain": "medical",
+    "degradation": "salt_pepper",
+    "image": "cxr_github_01",
+    "level": 3,
+    "amount": 0.1,
+    "clean": "medical/clean/cxr_github_01.png",
+    "degraded": "medical/salt_pepper/cxr_github_01_l3.png"
+  },
+  {
+    "domain": "medical",
+    "degradation": "gaussian_noise",
+    "image": "cxr_github_01",
+    "level": 1,
+    "sigma": 0.04,
+    "clean": "medical/clean/cxr_github_01.png",
+    "degraded": "medical/gaussian_noise/cxr_github_01_l1.png"
+  },
+  {
+    "domain": "medical",
+    "degradation": "gaussian_noise",
+    "image": "cxr_github_01",
+    "level": 2,
+    "sigma": 0.08,
+    "clean": "medical/clean/cxr_github_01.png",
+    "degraded": "medical/gaussian_noise/cxr_github_01_l2.png"
+  },
+  {
+    "domain": "medical",
+    "degradation": "gaussian_noise",
+    "image": "cxr_github_01",
+    "level": 3,
+    "sigma": 0.12,
+    "clean": "medical/clean/cxr_github_01.png",
+    "degraded": "medical/gaussian_noise/cxr_github_01_l3.png"
+  },
+  {
+    "domain": "medical",
+    "degradation": "blur",
+    "image": "cxr_github_01",
+    "level": 1,
+    "sigma": 1.5,
+    "clean": "medical/clean/cxr_github_01.png",
+    "degraded": "medical/blur/cxr_github_01_l1.png"
+  },
+  {
+    "domain": "medical",
+    "degradation": "blur",
+    "image": "cxr_github_01",
+    "level": 2,
+    "sigma": 2.5,
+    "clean": "medical/clean/cxr_github_01.png",
+    "degraded": "medical/blur/cxr_github_01_l2.png"
+  },
+  {
+    "domain": "medical",
+    "degradation": "blur",
+    "image": "cxr_github_01",
+    "level": 3,
+    "sigma": 4.0,
+    "clean": "medical/clean/cxr_github_01.png",
+    "degraded": "medical/blur/cxr_github_01_l3.png"
+  },
+  {
+    "domain": "medical",
+    "degradation": "salt_pepper",
+    "image": "cxr_github_02",
+    "level": 1,
+    "amount": 0.02,
+    "clean": "medical/clean/cxr_github_02.png",
+    "degraded": "medical/salt_pepper/cxr_github_02_l1.png"
+  },
+  {
+    "domain": "medical",
+    "degradation": "salt_pepper",
+    "image": "cxr_github_02",
+    "level": 2,
+    "amount": 0.05,
+    "clean": "medical/clean/cxr_github_02.png",
+    "degraded": "medical/salt_pepper/cxr_github_02_l2.png"
+  },
+  {
+    "domain": "medical",
+    "degradation": "salt_pepper",
+    "image": "cxr_github_02",
+    "level": 3,
+    "amount": 0.1,
+    "clean": "medical/clean/cxr_github_02.png",
+    "degraded": "medical/salt_pepper/cxr_github_02_l3.png"
+  },
+  {
+    "domain": "medical",
+    "degradation": "gaussian_noise",
+    "image": "cxr_github_02",
+    "level": 1,
+    "sigma": 0.04,
+    "clean": "medical/clean/cxr_github_02.png",
+    "degraded": "medical/gaussian_noise/cxr_github_02_l1.png"
+  },
+  {
+    "domain": "medical",
+    "degradation": "gaussian_noise",
+    "image": "cxr_github_02",
+    "level": 2,
+    "sigma": 0.08,
+    "clean": "medical/clean/cxr_github_02.png",
+    "degraded": "medical/gaussian_noise/cxr_github_02_l2.png"
+  },
+  {
+    "domain": "medical",
+    "degradation": "gaussian_noise",
+    "image": "cxr_github_02",
+    "level": 3,
+    "sigma": 0.12,
+    "clean": "medical/clean/cxr_github_02.png",
+    "degraded": "medical/gaussian_noise/cxr_github_02_l3.png"
+  },
+  {
+    "domain": "medical",
+    "degradation": "blur",
+    "image": "cxr_github_02",
+    "level": 1,
+    "sigma": 1.5,
+    "clean": "medical/clean/cxr_github_02.png",
+    "degraded": "medical/blur/cxr_github_02_l1.png"
+  },
+  {
+    "domain": "medical",
+    "degradation": "blur",
+    "image": "cxr_github_02",
+    "level": 2,
+    "sigma": 2.5,
+    "clean": "medical/clean/cxr_github_02.png",
+    "degraded": "medical/blur/cxr_github_02_l2.png"
+  },
+  {
+    "domain": "medical",
+    "degradation": "blur",
+    "image": "cxr_github_02",
+    "level": 3,
+    "sigma": 4.0,
+    "clean": "medical/clean/cxr_github_02.png",
+    "degraded": "medical/blur/cxr_github_02_l3.png"
+  },
+  {
+    "domain": "medical",
+    "degradation": "salt_pepper",
+    "image": "cxr_github_03",
+    "level": 1,
+    "amount": 0.02,
+    "clean": "medical/clean/cxr_github_03.png",
+    "degraded": "medical/salt_pepper/cxr_github_03_l1.png"
+  },
+  {
+    "domain": "medical",
+    "degradation": "salt_pepper",
+    "image": "cxr_github_03",
+    "level": 2,
+    "amount": 0.05,
+    "clean": "medical/clean/cxr_github_03.png",
+    "degraded": "medical/salt_pepper/cxr_github_03_l2.png"
+  },
+  {
+    "domain": "medical",
+    "degradation": "salt_pepper",
+    "image": "cxr_github_03",
+    "level": 3,
+    "amount": 0.1,
+    "clean": "medical/clean/cxr_github_03.png",
+    "degraded": "medical/salt_pepper/cxr_github_03_l3.png"
+  },
+  {
+    "domain": "medical",
+    "degradation": "gaussian_noise",
+    "image": "cxr_github_03",
+    "level": 1,
+    "sigma": 0.04,
+    "clean": "medical/clean/cxr_github_03.png",
+    "degraded": "medical/gaussian_noise/cxr_github_03_l1.png"
+  },
+  {
+    "domain": "medical",
+    "degradation": "gaussian_noise",
+    "image": "cxr_github_03",
+    "level": 2,
+    "sigma": 0.08,
+    "clean": "medical/clean/cxr_github_03.png",
+    "degraded": "medical/gaussian_noise/cxr_github_03_l2.png"
+  },
+  {
+    "domain": "medical",
+    "degradation": "gaussian_noise",
+    "image": "cxr_github_03",
+    "level": 3,
+    "sigma": 0.12,
+    "clean": "medical/clean/cxr_github_03.png",
+    "degraded": "medical/gaussian_noise/cxr_github_03_l3.png"
+  },
+  {
+    "domain": "medical",
+    "degradation": "blur",
+    "image": "cxr_github_03",
+    "level": 1,
+    "sigma": 1.5,
+    "clean": "medical/clean/cxr_github_03.png",
+    "degraded": "medical/blur/cxr_github_03_l1.png"
+  },
+  {
+    "domain": "medical",
+    "degradation": "blur",
+    "image": "cxr_github_03",
+    "level": 2,
+    "sigma": 2.5,
+    "clean": "medical/clean/cxr_github_03.png",
+    "degraded": "medical/blur/cxr_github_03_l2.png"
+  },
+  {
+    "domain": "medical",
+    "degradation": "blur",
+    "image": "cxr_github_03",
+    "level": 3,
+    "sigma": 4.0,
+    "clean": "medical/clean/cxr_github_03.png",
+    "degraded": "medical/blur/cxr_github_03_l3.png"
+  },
+  {
+    "domain": "medical",
+    "degradation": "salt_pepper",
+    "image": "cxr_github_04",
+    "level": 1,
+    "amount": 0.02,
+    "clean": "medical/clean/cxr_github_04.png",
+    "degraded": "medical/salt_pepper/cxr_github_04_l1.png"
+  },
+  {
+    "domain": "medical",
+    "degradation": "salt_pepper",
+    "image": "cxr_github_04",
+    "level": 2,
+    "amount": 0.05,
+    "clean": "medical/clean/cxr_github_04.png",
+    "degraded": "medical/salt_pepper/cxr_github_04_l2.png"
+  },
+  {
+    "domain": "medical",
+    "degradation": "salt_pepper",
+    "image": "cxr_github_04",
+    "level": 3,
+    "amount": 0.1,
+    "clean": "medical/clean/cxr_github_04.png",
+    "degraded": "medical/salt_pepper/cxr_github_04_l3.png"
+  },
+  {
+    "domain": "medical",
+    "degradation": "gaussian_noise",
+    "image": "cxr_github_04",
+    "level": 1,
+    "sigma": 0.04,
+    "clean": "medical/clean/cxr_github_04.png",
+    "degraded": "medical/gaussian_noise/cxr_github_04_l1.png"
+  },
+  {
+    "domain": "medical",
+    "degradation": "gaussian_noise",
+    "image": "cxr_github_04",
+    "level": 2,
+    "sigma": 0.08,
+    "clean": "medical/clean/cxr_github_04.png",
+    "degraded": "medical/gaussian_noise/cxr_github_04_l2.png"
+  },
+  {
+    "domain": "medical",
+    "degradation": "gaussian_noise",
+    "image": "cxr_github_04",
+    "level": 3,
+    "sigma": 0.12,
+    "clean": "medical/clean/cxr_github_04.png",
+    "degraded": "medical/gaussian_noise/cxr_github_04_l3.png"
+  },
+  {
+    "domain": "medical",
+    "degradation": "blur",
+    "image": "cxr_github_04",
+    "level": 1,
+    "sigma": 1.5,
+    "clean": "medical/clean/cxr_github_04.png",
+    "degraded": "medical/blur/cxr_github_04_l1.png"
+  },
+  {
+    "domain": "medical",
+    "degradation": "blur",
+    "image": "cxr_github_04",
+    "level": 2,
+    "sigma": 2.5,
+    "clean": "medical/clean/cxr_github_04.png",
+    "degraded": "medical/blur/cxr_github_04_l2.png"
+  },
+  {
+    "domain": "medical",
+    "degradation": "blur",
+    "image": "cxr_github_04",
+    "level": 3,
+    "sigma": 4.0,
+    "clean": "medical/clean/cxr_github_04.png",
+    "degraded": "medical/blur/cxr_github_04_l3.png"
+  },
+  {
+    "domain": "medical",
+    "degradation": "salt_pepper",
+    "image": "cxr_github_05",
+    "level": 1,
+    "amount": 0.02,
+    "clean": "medical/clean/cxr_github_05.png",
+    "degraded": "medical/salt_pepper/cxr_github_05_l1.png"
+  },
+  {
+    "domain": "medical",
+    "degradation": "salt_pepper",
+    "image": "cxr_github_05",
+    "level": 2,
+    "amount": 0.05,
+    "clean": "medical/clean/cxr_github_05.png",
+    "degraded": "medical/salt_pepper/cxr_github_05_l2.png"
+  },
+  {
+    "domain": "medical",
+    "degradation": "salt_pepper",
+    "image": "cxr_github_05",
+    "level": 3,
+    "amount": 0.1,
+    "clean": "medical/clean/cxr_github_05.png",
+    "degraded": "medical/salt_pepper/cxr_github_05_l3.png"
+  },
+  {
+    "domain": "medical",
+    "degradation": "gaussian_noise",
+    "image": "cxr_github_05",
+    "level": 1,
+    "sigma": 0.04,
+    "clean": "medical/clean/cxr_github_05.png",
+    "degraded": "medical/gaussian_noise/cxr_github_05_l1.png"
+  },
+  {
+    "domain": "medical",
+    "degradation": "gaussian_noise",
+    "image": "cxr_github_05",
+    "level": 2,
+    "sigma": 0.08,
+    "clean": "medical/clean/cxr_github_05.png",
+    "degraded": "medical/gaussian_noise/cxr_github_05_l2.png"
+  },
+  {
+    "domain": "medical",
+    "degradation": "gaussian_noise",
+    "image": "cxr_github_05",
+    "level": 3,
+    "sigma": 0.12,
+    "clean": "medical/clean/cxr_github_05.png",
+    "degraded": "medical/gaussian_noise/cxr_github_05_l3.png"
+  },
+  {
+    "domain": "medical",
+    "degradation": "blur",
+    "image": "cxr_github_05",
+    "level": 1,
+    "sigma": 1.5,
+    "clean": "medical/clean/cxr_github_05.png",
+    "degraded": "medical/blur/cxr_github_05_l1.png"
+  },
+  {
+    "domain": "medical",
+    "degradation": "blur",
+    "image": "cxr_github_05",
+    "level": 2,
+    "sigma": 2.5,
+    "clean": "medical/clean/cxr_github_05.png",
+    "degraded": "medical/blur/cxr_github_05_l2.png"
+  },
+  {
+    "domain": "medical",
+    "degradation": "blur",
+    "image": "cxr_github_05",
+    "level": 3,
+    "sigma": 4.0,
+    "clean": "medical/clean/cxr_github_05.png",
+    "degraded": "medical/blur/cxr_github_05_l3.png"
+  },
+  {
+    "domain": "medical",
+    "degradation": "salt_pepper",
+    "image": "cxr_github_06",
+    "level": 1,
+    "amount": 0.02,
+    "clean": "medical/clean/cxr_github_06.png",
+    "degraded": "medical/salt_pepper/cxr_github_06_l1.png"
+  },
+  {
+    "domain": "medical",
+    "degradation": "salt_pepper",
+    "image": "cxr_github_06",
+    "level": 2,
+    "amount": 0.05,
+    "clean": "medical/clean/cxr_github_06.png",
+    "degraded": "medical/salt_pepper/cxr_github_06_l2.png"
+  },
+  {
+    "domain": "medical",
+    "degradation": "salt_pepper",
+    "image": "cxr_github_06",
+    "level": 3,
+    "amount": 0.1,
+    "clean": "medical/clean/cxr_github_06.png",
+    "degraded": "medical/salt_pepper/cxr_github_06_l3.png"
+  },
+  {
+    "domain": "medical",
+    "degradation": "gaussian_noise",
+    "image": "cxr_github_06",
+    "level": 1,
+    "sigma": 0.04,
+    "clean": "medical/clean/cxr_github_06.png",
+    "degraded": "medical/gaussian_noise/cxr_github_06_l1.png"
+  },
+  {
+    "domain": "medical",
+    "degradation": "gaussian_noise",
+    "image": "cxr_github_06",
+    "level": 2,
+    "sigma": 0.08,
+    "clean": "medical/clean/cxr_github_06.png",
+    "degraded": "medical/gaussian_noise/cxr_github_06_l2.png"
+  },
+  {
+    "domain": "medical",
+    "degradation": "gaussian_noise",
+    "image": "cxr_github_06",
+    "level": 3,
+    "sigma": 0.12,
+    "clean": "medical/clean/cxr_github_06.png",
+    "degraded": "medical/gaussian_noise/cxr_github_06_l3.png"
+  },
+  {
+    "domain": "medical",
+    "degradation": "blur",
+    "image": "cxr_github_06",
+    "level": 1,
+    "sigma": 1.5,
+    "clean": "medical/clean/cxr_github_06.png",
+    "degraded": "medical/blur/cxr_github_06_l1.png"
+  },
+  {
+    "domain": "medical",
+    "degradation": "blur",
+    "image": "cxr_github_06",
+    "level": 2,
+    "sigma": 2.5,
+    "clean": "medical/clean/cxr_github_06.png",
+    "degraded": "medical/blur/cxr_github_06_l2.png"
+  },
+  {
+    "domain": "medical",
+    "degradation": "blur",
+    "image": "cxr_github_06",
+    "level": 3,
+    "sigma": 4.0,
+    "clean": "medical/clean/cxr_github_06.png",
+    "degraded": "medical/blur/cxr_github_06_l3.png"
+  },
+  {
+    "domain": "satellite",
+    "degradation": "salt_pepper",
+    "image": "ucmerced_agricultural",
+    "level": 1,
+    "amount": 0.02,
+    "clean": "satellite/clean/ucmerced_agricultural.png",
+    "degraded": "satellite/salt_pepper/ucmerced_agricultural_l1.png"
+  },
+  {
+    "domain": "satellite",
+    "degradation": "salt_pepper",
+    "image": "ucmerced_agricultural",
+    "level": 2,
+    "amount": 0.05,
+    "clean": "satellite/clean/ucmerced_agricultural.png",
+    "degraded": "satellite/salt_pepper/ucmerced_agricultural_l2.png"
+  },
+  {
+    "domain": "satellite",
+    "degradation": "salt_pepper",
+    "image": "ucmerced_agricultural",
+    "level": 3,
+    "amount": 0.1,
+    "clean": "satellite/clean/ucmerced_agricultural.png",
+    "degraded": "satellite/salt_pepper/ucmerced_agricultural_l3.png"
+  },
+  {
+    "domain": "satellite",
+    "degradation": "gaussian_noise",
+    "image": "ucmerced_agricultural",
+    "level": 1,
+    "sigma": 0.04,
+    "clean": "satellite/clean/ucmerced_agricultural.png",
+    "degraded": "satellite/gaussian_noise/ucmerced_agricultural_l1.png"
+  },
+  {
+    "domain": "satellite",
+    "degradation": "gaussian_noise",
+    "image": "ucmerced_agricultural",
+    "level": 2,
+    "sigma": 0.08,
+    "clean": "satellite/clean/ucmerced_agricultural.png",
+    "degraded": "satellite/gaussian_noise/ucmerced_agricultural_l2.png"
+  },
+  {
+    "domain": "satellite",
+    "degradation": "gaussian_noise",
+    "image": "ucmerced_agricultural",
+    "level": 3,
+    "sigma": 0.12,
+    "clean": "satellite/clean/ucmerced_agricultural.png",
+    "degraded": "satellite/gaussian_noise/ucmerced_agricultural_l3.png"
+  },
+  {
+    "domain": "satellite",
+    "degradation": "blur",
+    "image": "ucmerced_agricultural",
+    "level": 1,
+    "sigma": 1.5,
+    "clean": "satellite/clean/ucmerced_agricultural.png",
+    "degraded": "satellite/blur/ucmerced_agricultural_l1.png"
+  },
+  {
+    "domain": "satellite",
+    "degradation": "blur",
+    "image": "ucmerced_agricultural",
+    "level": 2,
+    "sigma": 2.5,
+    "clean": "satellite/clean/ucmerced_agricultural.png",
+    "degraded": "satellite/blur/ucmerced_agricultural_l2.png"
+  },
+  {
+    "domain": "satellite",
+    "degradation": "blur",
+    "image": "ucmerced_agricultural",
+    "level": 3,
+    "sigma": 4.0,
+    "clean": "satellite/clean/ucmerced_agricultural.png",
+    "degraded": "satellite/blur/ucmerced_agricultural_l3.png"
+  },
+  {
+    "domain": "satellite",
+    "degradation": "salt_pepper",
+    "image": "ucmerced_beach",
+    "level": 1,
+    "amount": 0.02,
+    "clean": "satellite/clean/ucmerced_beach.png",
+    "degraded": "satellite/salt_pepper/ucmerced_beach_l1.png"
+  },
+  {
+    "domain": "satellite",
+    "degradation": "salt_pepper",
+    "image": "ucmerced_beach",
+    "level": 2,
+    "amount": 0.05,
+    "clean": "satellite/clean/ucmerced_beach.png",
+    "degraded": "satellite/salt_pepper/ucmerced_beach_l2.png"
+  },
+  {
+    "domain": "satellite",
+    "degradation": "salt_pepper",
+    "image": "ucmerced_beach",
+    "level": 3,
+    "amount": 0.1,
+    "clean": "satellite/clean/ucmerced_beach.png",
+    "degraded": "satellite/salt_pepper/ucmerced_beach_l3.png"
+  },
+  {
+    "domain": "satellite",
+    "degradation": "gaussian_noise",
+    "image": "ucmerced_beach",
+    "level": 1,
+    "sigma": 0.04,
+    "clean": "satellite/clean/ucmerced_beach.png",
+    "degraded": "satellite/gaussian_noise/ucmerced_beach_l1.png"
+  },
+  {
+    "domain": "satellite",
+    "degradation": "gaussian_noise",
+    "image": "ucmerced_beach",
+    "level": 2,
+    "sigma": 0.08,
+    "clean": "satellite/clean/ucmerced_beach.png",
+    "degraded": "satellite/gaussian_noise/ucmerced_beach_l2.png"
+  },
+  {
+    "domain": "satellite",
+    "degradation": "gaussian_noise",
+    "image": "ucmerced_beach",
+    "level": 3,
+    "sigma": 0.12,
+    "clean": "satellite/clean/ucmerced_beach.png",
+    "degraded": "satellite/gaussian_noise/ucmerced_beach_l3.png"
+  },
+  {
+    "domain": "satellite",
+    "degradation": "blur",
+    "image": "ucmerced_beach",
+    "level": 1,
+    "sigma": 1.5,
+    "clean": "satellite/clean/ucmerced_beach.png",
+    "degraded": "satellite/blur/ucmerced_beach_l1.png"
+  },
+  {
+    "domain": "satellite",
+    "degradation": "blur",
+    "image": "ucmerced_beach",
+    "level": 2,
+    "sigma": 2.5,
+    "clean": "satellite/clean/ucmerced_beach.png",
+    "degraded": "satellite/blur/ucmerced_beach_l2.png"
+  },
+  {
+    "domain": "satellite",
+    "degradation": "blur",
+    "image": "ucmerced_beach",
+    "level": 3,
+    "sigma": 4.0,
+    "clean": "satellite/clean/ucmerced_beach.png",
+    "degraded": "satellite/blur/ucmerced_beach_l3.png"
+  },
+  {
+    "domain": "satellite",
+    "degradation": "salt_pepper",
+    "image": "ucmerced_buildings",
+    "level": 1,
+    "amount": 0.02,
+    "clean": "satellite/clean/ucmerced_buildings.png",
+    "degraded": "satellite/salt_pepper/ucmerced_buildings_l1.png"
+  },
+  {
+    "domain": "satellite",
+    "degradation": "salt_pepper",
+    "image": "ucmerced_buildings",
+    "level": 2,
+    "amount": 0.05,
+    "clean": "satellite/clean/ucmerced_buildings.png",
+    "degraded": "satellite/salt_pepper/ucmerced_buildings_l2.png"
+  },
+  {
+    "domain": "satellite",
+    "degradation": "salt_pepper",
+    "image": "ucmerced_buildings",
+    "level": 3,
+    "amount": 0.1,
+    "clean": "satellite/clean/ucmerced_buildings.png",
+    "degraded": "satellite/salt_pepper/ucmerced_buildings_l3.png"
+  },
+  {
+    "domain": "satellite",
+    "degradation": "gaussian_noise",
+    "image": "ucmerced_buildings",
+    "level": 1,
+    "sigma": 0.04,
+    "clean": "satellite/clean/ucmerced_buildings.png",
+    "degraded": "satellite/gaussian_noise/ucmerced_buildings_l1.png"
+  },
+  {
+    "domain": "satellite",
+    "degradation": "gaussian_noise",
+    "image": "ucmerced_buildings",
+    "level": 2,
+    "sigma": 0.08,
+    "clean": "satellite/clean/ucmerced_buildings.png",
+    "degraded": "satellite/gaussian_noise/ucmerced_buildings_l2.png"
+  },
+  {
+    "domain": "satellite",
+    "degradation": "gaussian_noise",
+    "image": "ucmerced_buildings",
+    "level": 3,
+    "sigma": 0.12,
+    "clean": "satellite/clean/ucmerced_buildings.png",
+    "degraded": "satellite/gaussian_noise/ucmerced_buildings_l3.png"
+  },
+  {
+    "domain": "satellite",
+    "degradation": "blur",
+    "image": "ucmerced_buildings",
+    "level": 1,
+    "sigma": 1.5,
+    "clean": "satellite/clean/ucmerced_buildings.png",
+    "degraded": "satellite/blur/ucmerced_buildings_l1.png"
+  },
+  {
+    "domain": "satellite",
+    "degradation": "blur",
+    "image": "ucmerced_buildings",
+    "level": 2,
+    "sigma": 2.5,
+    "clean": "satellite/clean/ucmerced_buildings.png",
+    "degraded": "satellite/blur/ucmerced_buildings_l2.png"
+  },
+  {
+    "domain": "satellite",
+    "degradation": "blur",
+    "image": "ucmerced_buildings",
+    "level": 3,
+    "sigma": 4.0,
+    "clean": "satellite/clean/ucmerced_buildings.png",
+    "degraded": "satellite/blur/ucmerced_buildings_l3.png"
+  },
+  {
+    "domain": "satellite",
+    "degradation": "salt_pepper",
+    "image": "ucmerced_forest",
+    "level": 1,
+    "amount": 0.02,
+    "clean": "satellite/clean/ucmerced_forest.png",
+    "degraded": "satellite/salt_pepper/ucmerced_forest_l1.png"
+  },
+  {
+    "domain": "satellite",
+    "degradation": "salt_pepper",
+    "image": "ucmerced_forest",
+    "level": 2,
+    "amount": 0.05,
+    "clean": "satellite/clean/ucmerced_forest.png",
+    "degraded": "satellite/salt_pepper/ucmerced_forest_l2.png"
+  },
+  {
+    "domain": "satellite",
+    "degradation": "salt_pepper",
+    "image": "ucmerced_forest",
+    "level": 3,
+    "amount": 0.1,
+    "clean": "satellite/clean/ucmerced_forest.png",
+    "degraded": "satellite/salt_pepper/ucmerced_forest_l3.png"
+  },
+  {
+    "domain": "satellite",
+    "degradation": "gaussian_noise",
+    "image": "ucmerced_forest",
+    "level": 1,
+    "sigma": 0.04,
+    "clean": "satellite/clean/ucmerced_forest.png",
+    "degraded": "satellite/gaussian_noise/ucmerced_forest_l1.png"
+  },
+  {
+    "domain": "satellite",
+    "degradation": "gaussian_noise",
+    "image": "ucmerced_forest",
+    "level": 2,
+    "sigma": 0.08,
+    "clean": "satellite/clean/ucmerced_forest.png",
+    "degraded": "satellite/gaussian_noise/ucmerced_forest_l2.png"
+  },
+  {
+    "domain": "satellite",
+    "degradation": "gaussian_noise",
+    "image": "ucmerced_forest",
+    "level": 3,
+    "sigma": 0.12,
+    "clean": "satellite/clean/ucmerced_forest.png",
+    "degraded": "satellite/gaussian_noise/ucmerced_forest_l3.png"
+  },
+  {
+    "domain": "satellite",
+    "degradation": "blur",
+    "image": "ucmerced_forest",
+    "level": 1,
+    "sigma": 1.5,
+    "clean": "satellite/clean/ucmerced_forest.png",
+    "degraded": "satellite/blur/ucmerced_forest_l1.png"
+  },
+  {
+    "domain": "satellite",
+    "degradation": "blur",
+    "image": "ucmerced_forest",
+    "level": 2,
+    "sigma": 2.5,
+    "clean": "satellite/clean/ucmerced_forest.png",
+    "degraded": "satellite/blur/ucmerced_forest_l2.png"
+  },
+  {
+    "domain": "satellite",
+    "degradation": "blur",
+    "image": "ucmerced_forest",
+    "level": 3,
+    "sigma": 4.0,
+    "clean": "satellite/clean/ucmerced_forest.png",
+    "degraded": "satellite/blur/ucmerced_forest_l3.png"
+  },
+  {
+    "domain": "satellite",
+    "degradation": "salt_pepper",
+    "image": "ucmerced_harbor",
+    "level": 1,
+    "amount": 0.02,
+    "clean": "satellite/clean/ucmerced_harbor.png",
+    "degraded": "satellite/salt_pepper/ucmerced_harbor_l1.png"
+  },
+  {
+    "domain": "satellite",
+    "degradation": "salt_pepper",
+    "image": "ucmerced_harbor",
+    "level": 2,
+    "amount": 0.05,
+    "clean": "satellite/clean/ucmerced_harbor.png",
+    "degraded": "satellite/salt_pepper/ucmerced_harbor_l2.png"
+  },
+  {
+    "domain": "satellite",
+    "degradation": "salt_pepper",
+    "image": "ucmerced_harbor",
+    "level": 3,
+    "amount": 0.1,
+    "clean": "satellite/clean/ucmerced_harbor.png",
+    "degraded": "satellite/salt_pepper/ucmerced_harbor_l3.png"
+  },
+  {
+    "domain": "satellite",
+    "degradation": "gaussian_noise",
+    "image": "ucmerced_harbor",
+    "level": 1,
+    "sigma": 0.04,
+    "clean": "satellite/clean/ucmerced_harbor.png",
+    "degraded": "satellite/gaussian_noise/ucmerced_harbor_l1.png"
+  },
+  {
+    "domain": "satellite",
+    "degradation": "gaussian_noise",
+    "image": "ucmerced_harbor",
+    "level": 2,
+    "sigma": 0.08,
+    "clean": "satellite/clean/ucmerced_harbor.png",
+    "degraded": "satellite/gaussian_noise/ucmerced_harbor_l2.png"
+  },
+  {
+    "domain": "satellite",
+    "degradation": "gaussian_noise",
+    "image": "ucmerced_harbor",
+    "level": 3,
+    "sigma": 0.12,
+    "clean": "satellite/clean/ucmerced_harbor.png",
+    "degraded": "satellite/gaussian_noise/ucmerced_harbor_l3.png"
+  },
+  {
+    "domain": "satellite",
+    "degradation": "blur",
+    "image": "ucmerced_harbor",
+    "level": 1,
+    "sigma": 1.5,
+    "clean": "satellite/clean/ucmerced_harbor.png",
+    "degraded": "satellite/blur/ucmerced_harbor_l1.png"
+  },
+  {
+    "domain": "satellite",
+    "degradation": "blur",
+    "image": "ucmerced_harbor",
+    "level": 2,
+    "sigma": 2.5,
+    "clean": "satellite/clean/ucmerced_harbor.png",
+    "degraded": "satellite/blur/ucmerced_harbor_l2.png"
+  },
+  {
+    "domain": "satellite",
+    "degradation": "blur",
+    "image": "ucmerced_harbor",
+    "level": 3,
+    "sigma": 4.0,
+    "clean": "satellite/clean/ucmerced_harbor.png",
+    "degraded": "satellite/blur/ucmerced_harbor_l3.png"
+  },
+  {
+    "domain": "satellite",
+    "degradation": "salt_pepper",
+    "image": "ucmerced_river",
+    "level": 1,
+    "amount": 0.02,
+    "clean": "satellite/clean/ucmerced_river.png",
+    "degraded": "satellite/salt_pepper/ucmerced_river_l1.png"
+  },
+  {
+    "domain": "satellite",
+    "degradation": "salt_pepper",
+    "image": "ucmerced_river",
+    "level": 2,
+    "amount": 0.05,
+    "clean": "satellite/clean/ucmerced_river.png",
+    "degraded": "satellite/salt_pepper/ucmerced_river_l2.png"
+  },
+  {
+    "domain": "satellite",
+    "degradation": "salt_pepper",
+    "image": "ucmerced_river",
+    "level": 3,
+    "amount": 0.1,
+    "clean": "satellite/clean/ucmerced_river.png",
+    "degraded": "satellite/salt_pepper/ucmerced_river_l3.png"
+  },
+  {
+    "domain": "satellite",
+    "degradation": "gaussian_noise",
+    "image": "ucmerced_river",
+    "level": 1,
+    "sigma": 0.04,
+    "clean": "satellite/clean/ucmerced_river.png",
+    "degraded": "satellite/gaussian_noise/ucmerced_river_l1.png"
+  },
+  {
+    "domain": "satellite",
+    "degradation": "gaussian_noise",
+    "image": "ucmerced_river",
+    "level": 2,
+    "sigma": 0.08,
+    "clean": "satellite/clean/ucmerced_river.png",
+    "degraded": "satellite/gaussian_noise/ucmerced_river_l2.png"
+  },
+  {
+    "domain": "satellite",
+    "degradation": "gaussian_noise",
+    "image": "ucmerced_river",
+    "level": 3,
+    "sigma": 0.12,
+    "clean": "satellite/clean/ucmerced_river.png",
+    "degraded": "satellite/gaussian_noise/ucmerced_river_l3.png"
+  },
+  {
+    "domain": "satellite",
+    "degradation": "blur",
+    "image": "ucmerced_river",
+    "level": 1,
+    "sigma": 1.5,
+    "clean": "satellite/clean/ucmerced_river.png",
+    "degraded": "satellite/blur/ucmerced_river_l1.png"
+  },
+  {
+    "domain": "satellite",
+    "degradation": "blur",
+    "image": "ucmerced_river",
+    "level": 2,
+    "sigma": 2.5,
+    "clean": "satellite/clean/ucmerced_river.png",
+    "degraded": "satellite/blur/ucmerced_river_l2.png"
+  },
+  {
+    "domain": "satellite",
+    "degradation": "blur",
+    "image": "ucmerced_river",
+    "level": 3,
+    "sigma": 4.0,
+    "clean": "satellite/clean/ucmerced_river.png",
+    "degraded": "satellite/blur/ucmerced_river_l3.png"
+  }
+]

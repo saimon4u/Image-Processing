@@ -1,0 +1,13 @@
+domain,degradation,pipeline,plcc,srocc
+medical,salt_pepper,A (sharpen only),-0.9316913953397388,-0.8224974200206399
+medical,salt_pepper,B (restore + sharpen),-0.514151358351869,-0.44272445820433437
+medical,gaussian_noise,A (sharpen only),-0.8878346661258636,-0.9050567595459236
+medical,gaussian_noise,B (restore + sharpen),-0.938778155321892,-0.8740970072239422
+medical,blur,A (sharpen only),0.6613183282382217,0.7440660474716203
+medical,blur,B (restore + sharpen),-0.35957465902920094,-0.3787409700722395
+satellite,salt_pepper,A (sharpen only),-0.7636601942205855,-0.7337461300309598
+satellite,salt_pepper,B (restore + sharpen),0.07949316912930963,-0.08359133126934992
+satellite,gaussian_noise,A (sharpen only),-0.441876734194712,-0.46955624355005154
+satellite,gaussian_noise,B (restore + sharpen),-0.34458975377218204,0.1475748194014448
+satellite,blur,A (sharpen only),0.49124057865686616,0.7316821465428276
+satellite,blur,B (restore + sharpen),0.36345481549960174,0.22600619195046434
