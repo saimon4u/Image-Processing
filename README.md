@@ -60,9 +60,13 @@ the correction strength doesn't adapt to blur severity — visible as edge
 halos in `output/*_blur1_sharpened.png`. This matches the paper's own noted
 oversharpening risk at parameter values tuned for stronger blur.
 
-## Usage
+## Extension: restoration before sharpening
+
+`extension_restoration_usm/` applies the same modified unsharp masking to **chest X-rays** and **UC Merced** remote-sensing scenes after three TID2013-style degradations (salt-and-pepper, Gaussian noise, Gaussian blur). Pipeline A sharpens the degraded image directly; Pipeline B restores first, then sharpens.
 
 ```bash
 source venv/bin/activate
-python demo.py
+python extension_restoration_usm/run_experiment.py
 ```
+
+See `extension_restoration_usm/README.md` and `extension_restoration_usm/output/ANALYSIS.md`.
