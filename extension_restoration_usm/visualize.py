@@ -7,6 +7,7 @@ import matplotlib
 
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
+from matplotlib.colors import TwoSlopeNorm
 import numpy as np
 
 from config import FIG_DIR, PANEL_DIR
@@ -58,7 +59,9 @@ def save_heatmap(table_rows: list[dict], dest: Path) -> None:
             grid[i, j] = match[0]["delta_ssim"] if match else 0.0
 
     fig, ax = plt.subplots(figsize=(7.2, 3.4))
-    im = ax.imshow(grid, cmap="RdYlGn", vmin=-0.05, vmax=max(0.05, float(np.max(grid))))
+    span = max(0.05, float(np.max(np.abs(grid))))
+    norm = TwoSlopeNorm(vmin=-span, vcenter=0.0, vmax=span)
+    im = ax.imshow(grid, cmap="RdYlGn", norm=norm)
     ax.set_xticks(range(len(labels)), labels)
     ax.set_yticks(range(len(domains)), ["Medical (CXR)", "Satellite (UC Merced)"])
     for i in range(grid.shape[0]):

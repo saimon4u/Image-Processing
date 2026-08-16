@@ -56,4 +56,15 @@ MEDIAN_SIZE_BY_AMOUNT = {0.02: 3, 0.05: 5, 0.10: 5}
 NLM_PATCH_SIZE = 5
 NLM_PATCH_DISTANCE = 6
 NLM_H_SCALE = 0.8  # h = NLM_H_SCALE * estimated sigma
-WIENER_BALANCE = 0.05  # noise-to-signal trade-off; smaller = more aggressive deblur
+WIENER_BALANCE = 0.05  # noise-to-signal; smaller = more aggressive deblur
+
+# After restoration the residual image-smooth(image) is already larger than on a
+# degraded input, so the paper's full k (tuned for blurry IQA images) overshoots.
+# Pipeline B therefore applies k_eff = γ · k(t, λ) with γ < 1.
+# γ was chosen on a held-out-style sweep so that B stays close to restoration-only
+# quality while still applying a light coefficient-bound crisp.
+K_SCALE_AFTER_RESTORE = {
+    "salt_pepper": 0.12,
+    "gaussian_noise": 0.12,
+    "blur": 0.20,
+}

@@ -92,6 +92,8 @@ W(f) = H*(f) / (|H(f)|² + K)
 
 where `H` is the Gaussian blur OTF and `K` is a noise-to-signal parameter. Because this experiment *synthesises* the blur, the PSF is known (non-blind). That is the statistically correct restoration for Gaussian blur plus mild noise, and it actually attempts to restore attenuated frequencies instead of only steepening ramps.
 
+FFT deconvolution treats the image as periodic. Without padding, that wraps opposite borders into each other and leaves bright/dark bands; the following USM step then amplifies those bands into the halos that made Pipeline B lose to the paper on blur. The implementation therefore **reflect-pads by ~4σ** (the Gaussian kernel support) before Wiener and crops back afterwards.
+
 **Why not Richardson–Lucy?** RL is the Poisson / photon-count ML iteration. Chest X-rays and 8-bit RGB remote-sensing products here are treated as Gaussian-blurred intensity images, not Poisson photon counts.
 
 **Why not USM alone as the "restoration"?** That would make Pipeline A and Pipeline B identical for blur. Wiener is a genuine alternative model; USM is then a *subsequent* edge-emphasis step, which is exactly the hypothesis being tested: restore, then sharpen.
@@ -117,10 +119,21 @@ So the *same* restoration+sharpening pipeline can help both domains and still sh
 
 ```
 Pipeline A (paper baseline, applied to degraded inputs)
-    Degraded  →  Modified USM(t=0.6, λ=0)  →  Output
+    Degraded  →  Modified USM(t=0.6, λ=0, full k)  →  Output
 
 Pipeline B (this extension)
-    Degraded  →  Restoration matched to the degradation  →  Modified USM  →  Output
+    Degraded  →  Restoration  →  Modified USM(t=0.6, λ=0, k_eff = γ·k)  →  Output
 ```
 
 The comparison of A vs B, on both domains, for all three degradations, is the core experiment.
+
+---
+
+## 6. Why the first Pipeline B lost on blur — and the fix
+
+On the first run, Pipeline B *lost* to the paper on both medical and satellite blur (ΔSSIM −0.10 and −0.07) even though it won on both noise types. Two stacked bugs, not a domain effect:
+
+1. **Wiener border wrap-around.** Restoration-only SSIM was already below sharpening-only, and the 5-panel figures showed ringing at the frame. Reflect padding removes that; padded Wiener-only then *beats* the paper on blur.
+2. **Full paper `k` after restoration.** Even on noise, restoration-only SSIM was far above restore-then-full-USM (e.g. medical Gaussian 0.80 vs 0.44). The paper's `k ≈ 2.85` at `t = 0.6` was calibrated to add edges to a *degraded* image. After median / NLM / Wiener the residual `image − smooth(image)` is already larger, so the same `k` double-counts edge energy and reintroduces grain and halos.
+
+Pipeline B therefore uses a restoration-aware gain `k_eff = γ · k(t, λ)` with `γ = 0.12` after denoising and `γ = 0.20` after deblur. The coefficient-bound formula is unchanged; only the amount applied after a restored residual is reduced. Pipeline A still uses the paper's full `k`.
