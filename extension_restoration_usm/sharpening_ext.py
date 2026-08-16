@@ -36,10 +36,17 @@ def modified_usm(
     t: float = T,
     lam: float = LAM,
     sigma: float = USM_SIGMA,
+    k_scale: float = 1.0,
 ) -> np.ndarray:
+    """Apply coefficient-bound unsharp masking.
+
+    k_scale < 1 is used after restoration: the paper's k was calibrated on
+    degraded inputs, and the residual is already larger once the image has
+    been denoised or deblurred.
+    """
     image = np.asarray(image, dtype=np.float64)
     vmax = 1.0 if image.max() <= 1.0 else 255.0
     smoothed = gaussian_smooth(image, sigma=sigma)
     edge = image - smoothed
-    k = sharpening_factor(t, lam)
+    k = sharpening_factor(t, lam) * float(k_scale)
     return np.clip(image + k * edge, 0.0, vmax)

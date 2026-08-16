@@ -56,19 +56,39 @@ def restore_gaussian_noise(image: np.ndarray, sigma: float | None = None) -> np.
 
 
 def restore_blur(image: np.ndarray, sigma: float) -> np.ndarray:
-    """Wiener deconvolution with the known Gaussian PSF used to synthesise the blur."""
+    """Wiener deconvolution with the known Gaussian PSF, reflect-padded.
+
+    FFT deconvolution wraps the image torus-like. Without padding that produces
+    bright/dark bands at the border, which the subsequent USM then amplifies.
+    Reflect padding of ~4σ (the Gaussian kernel support) suppresses that.
+    """
     psf = gaussian_psf(sigma)
-    if image.ndim == 3:
+    pad = max(8, int(4.0 * sigma + 2))
+    work = _reflect_pad(image, pad)
+    if work.ndim == 3:
         restored = np.stack(
             [
-                wiener(image[..., c], psf, balance=WIENER_BALANCE, clip=True)
-                for c in range(image.shape[2])
+                wiener(work[..., c], psf, balance=WIENER_BALANCE, clip=True)
+                for c in range(work.shape[2])
             ],
             axis=-1,
         )
     else:
-        restored = wiener(image, psf, balance=WIENER_BALANCE, clip=True)
-    return np.clip(np.asarray(restored, dtype=np.float64), 0.0, 1.0)
+        restored = wiener(work, psf, balance=WIENER_BALANCE, clip=True)
+    restored = _crop_pad(np.asarray(restored, dtype=np.float64), pad)
+    return np.clip(restored, 0.0, 1.0)
+
+
+def _reflect_pad(image: np.ndarray, pad: int) -> np.ndarray:
+    if image.ndim == 2:
+        return np.pad(image, pad, mode="reflect")
+    return np.pad(image, ((pad, pad), (pad, pad), (0, 0)), mode="reflect")
+
+
+def _crop_pad(image: np.ndarray, pad: int) -> np.ndarray:
+    if image.ndim == 2:
+        return image[pad:-pad, pad:-pad]
+    return image[pad:-pad, pad:-pad, :]
 
 
 def restore(image: np.ndarray, degradation: str, record: dict) -> np.ndarray:

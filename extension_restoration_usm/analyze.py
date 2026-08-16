@@ -169,7 +169,7 @@ Judged by mean ΔSSIM of B versus A:
 
 The largest restoration benefit is for **{DEG_LABEL[best_deg]}**, which is the expected result:
 unsharp masking treats impulses and grain as edges, so removing them first stops the sharpener from amplifying them.
-For blur, unsharp masking is already a deblurring heuristic, so Wiener helps less (and can overshoot if `K` is too small).
+For blur, padded Wiener restores attenuated frequencies; a reduced post-restore `k` then crisps edges without re-ringing.
 
 ### Does the improvement differ between medical and satellite images?
 
@@ -189,13 +189,13 @@ Yes. The 5-panel figures in `output/panels/` show:
 
 - Salt-and-pepper: Pipeline A turns specks into larger clipped blobs with halos; Pipeline B removes specks then sharpens anatomy / field boundaries.
 - Gaussian noise: Pipeline A looks grainy, especially in lung fields and open water; Pipeline B is cleaner, with less false texture.
-- Blur: Pipeline A steepens ramps and can halo; Pipeline B (Wiener then USM) recovers thinner edges but can still overshoot at the strongest blur level.
+- Blur: Pipeline A steepens ramps; Pipeline B (padded Wiener, then a reduced `k`) recovers thinner edges with less border ringing.
 
 ### Does the optimal sharpening configuration from the paper remain effective for both domains?
 
 The paper reports `t = 0.6`, `λ = 0` as the best balance on CSIQ/LIVE/TID2013/KADID blur experiments.
 A small sweep of `t ∈ {{0.4, 0.6, 0.8}}` at `λ = 0` on these domain images gives: {sweep_note}
-The paper's `t = 0.6` was tuned on *blur-only* natural IQA images. On noisy medical and remote-sensing inputs a smaller `t` (weaker `k`) is safer after restoration. Keep `λ = 0`. For blur-only images, `t = 0.6` remains competitive.
+The paper's `t = 0.6` remains a good default for the coefficient formula in both domains. Pipeline B additionally scales that `k` by `γ < 1` after restoration; changing `t` and `γ` at once is redundant. Keep `λ = 0`.
 
 ## Method notes
 

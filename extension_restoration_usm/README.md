@@ -50,7 +50,7 @@ with the paper's reported operating point `t = 0.6`, `λ = 0`.
 | Pipeline | Flow |
 |---|---|
 | **A** (baseline) | Degraded → Modified USM |
-| **B** (proposed) | Degraded → Restoration → Modified USM |
+| **B** (proposed) | Degraded → Restoration → Modified USM with `k_eff = γ · k` |
 
 Restoration is matched to the degradation (see `STUDY.md`):
 
@@ -58,7 +58,9 @@ Restoration is matched to the degradation (see `STUDY.md`):
 |---|---|
 | Salt-and-pepper | Median filter |
 | Gaussian noise | Non-local means |
-| Gaussian blur | Wiener deconvolution (known PSF) |
+| Gaussian blur | Wiener deconvolution (known PSF, reflect-padded) + reduced `k` (`γ = 0.20`) |
+
+After restoration the residual is already larger than on a degraded input, so Pipeline B applies a fraction `γ` of the paper's `k` (`γ = 0.12` after denoising, `γ = 0.20` after deblur). Pipeline A still uses the paper's full `k`.
 
 ## Dataset structure
 
