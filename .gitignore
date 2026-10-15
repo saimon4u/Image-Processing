@@ -3,3 +3,17 @@ __pycache__/
 *.pyc
 output/*.png
 
+
+# paper (not tracked)
+extension_restoration_usm/paper/
+extension_restoration_usm/paper_block_diagram.py
+extension_restoration_usm/make_paper_figures.py
+extension_restoration_usm/Image (1).pdf
+extension_restoration_usm/original authors paper of image.pdf
+extension_restoration_usm/paper.zip
+
+# experiment logs
+extension_restoration_usm/tune.log
+extension_restoration_usm/output/ablation.log
+extension_restoration_usm/output/auto_run.log
+extension_restoration_usm/output/blur_fix.log
